@@ -102,6 +102,7 @@ class UUIDTests(unittest.TestCase):
         self.assertAlmostEqual(uuid_6.time / 10**7, uuid_1.time / 10**7, 3)
         cur_time = time_ns()
         uuid_7 = uuid7()
+        cur_time = (cur_time + time_ns()) / 2
         self.assertAlmostEqual(uuid_7.time / 10**9, cur_time / 10**9, 3)
 
     def test_zero_time(self):
